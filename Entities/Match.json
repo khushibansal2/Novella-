@@ -1,0 +1,55 @@
+{
+  "name": "Match",
+  "type": "object",
+  "properties": {
+    "user1_id": {
+      "type": "string",
+      "description": "First user ID"
+    },
+    "user2_id": {
+      "type": "string",
+      "description": "Second user ID"
+    },
+    "sync_level": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Heartbeat sync compatibility percentage"
+    },
+    "butterfly_type": {
+      "type": "string",
+      "enum": [
+        "monarch",
+        "swallowtail",
+        "morpho",
+        "glasswing",
+        "rare_phoenix"
+      ],
+      "description": "Shared butterfly species"
+    },
+    "last_interaction": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "conversation_depth": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Depth of conversations (unlocks rare species)"
+    },
+    "is_ghosted": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether one person stopped responding"
+    },
+    "heart_sync_sessions": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of synchronized heartbeat sessions"
+    }
+  },
+  "required": [
+    "user1_id",
+    "user2_id"
+  ]
+}

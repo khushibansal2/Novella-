@@ -1,0 +1,52 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "match_id": {
+      "type": "string",
+      "description": "Match ID this message belongs to"
+    },
+    "sender_id": {
+      "type": "string",
+      "description": "User ID who sent the message"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "voice_mood",
+        "ghost_glimpse",
+        "flutter_tap"
+      ],
+      "default": "text"
+    },
+    "voice_mood": {
+      "type": "string",
+      "enum": [
+        "golden_pollen",
+        "blue_mist",
+        "silver_whisper",
+        "rose_ember"
+      ],
+      "description": "Analyzed mood from voice message"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "has_butterfly": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether a butterfly landed on this message"
+    }
+  },
+  "required": [
+    "match_id",
+    "sender_id",
+    "content"
+  ]
+}

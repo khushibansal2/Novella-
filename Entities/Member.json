@@ -1,0 +1,34 @@
+{
+  "name": "Member",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Member name"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "Profile picture URL"
+    },
+    "collection_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Collection percentage rate"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "offline",
+        "away"
+      ],
+      "default": "online",
+      "description": "Member status"
+    }
+  },
+  "required": [
+    "name",
+    "collection_rate"
+  ]
+}
