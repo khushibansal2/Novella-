@@ -1,13 +1,13 @@
-// src/App.js
-import './App.css';
+import React from 'react';
+import Voicemood from "./Pages/VoiceMood.jsx";
 
 function App() {
   return (
     <div className="App">
-      <h1>🚀 Welcome to Novella</h1>
-      <p>Your app is running locally now!</p>
+      <Voicemood />
     </div>
   );
 }
 
 export default App;
+
